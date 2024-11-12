@@ -5,7 +5,6 @@ public class NoDuplo<T>
     public T Valor { get; set; }
     public NoDuplo<T> Proximo { get; set; }
     public NoDuplo<T> Anterior { get; set; }
-
     public NoDuplo(T valor)
     {
         Valor = valor;

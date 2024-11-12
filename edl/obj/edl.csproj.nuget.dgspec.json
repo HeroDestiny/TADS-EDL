@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/workspaces/TADS-EDL/edl/edl.csproj": {}
+    "/workspaces/TADS-EDL/c#/edl/edl.csproj": {}
   },
   "projects": {
-    "/workspaces/TADS-EDL/edl/edl.csproj": {
+    "/workspaces/TADS-EDL/c#/edl/edl.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/workspaces/TADS-EDL/edl/edl.csproj",
+        "projectUniqueName": "/workspaces/TADS-EDL/c#/edl/edl.csproj",
         "projectName": "edl",
-        "projectPath": "/workspaces/TADS-EDL/edl/edl.csproj",
+        "projectPath": "/workspaces/TADS-EDL/c#/edl/edl.csproj",
         "packagesPath": "/home/codespace/.nuget/packages/",
-        "outputPath": "/workspaces/TADS-EDL/edl/obj/",
+        "outputPath": "/workspaces/TADS-EDL/c#/edl/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/codespace/.nuget/NuGet/NuGet.Config"
