@@ -1,0 +1,58 @@
+class Node {
+    int data;
+    Node next;
+    Node prev;
+
+    public Node(int data) {
+        this.data = data;
+        this.next = null;
+        this.prev = null;
+    }
+}
+
+class ListaDuplamenteEncadeada {
+    private Node sentinel;
+
+    public ListaDuplamenteEncadeada(){
+        sentinel = new Node();
+        sentinel.next = sentinel;
+        sentinel.prev = sentinel;
+    }
+
+    public void inserirInicio(int data){
+        Node newNode = new Node(data);
+        newNode.next = sentinel.next;
+        newNode.prev = sentinel;
+        sentinel.next.prev = newNode;
+        sentinel.next = newNode;
+    }
+
+    public void inserirFim(int data){
+        Node newNode = new Node(data);
+        newNode.prev = sentinel.prev;
+        newNode.next = sentinel;
+        sentinel.prev.next = newNode;
+        sentinel.prev = newNode;
+    }
+
+    public void displayForward() {
+        Node current = sentinel.next;
+        while (current != sentinel) {
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
+        System.out.println();
+    }
+
+    public void removerInicio() {
+        if (sentinel.next == sentinel) {
+            System.outprintln("Lista vazia, não é possível remover.");
+            return;
+        }
+        Node noParaRemover = sentinel.next;
+        noParaRemover.sentinel.next = noParaRemover.next;
+        noParaRemover.next.prev = sentinel;
+        System.out.println("Removido do início: " + noParaRemover.data);
+        noParaRemover = null; // Opcional, para liberar memória
+    }
+}
