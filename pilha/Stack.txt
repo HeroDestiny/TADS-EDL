@@ -69,7 +69,7 @@ class Stack {
     }
 
     public class TesteDuasPilhas {
-        public static void main(String[] args) {
+        public void main(String[] args) {
             Stack stack = new Stack(10);
 
             // Testando push

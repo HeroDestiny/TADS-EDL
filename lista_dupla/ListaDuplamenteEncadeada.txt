@@ -14,7 +14,7 @@ class ListaDuplamenteEncadeada {
     private Node sentinel;
 
     public ListaDuplamenteEncadeada(){
-        sentinel = new Node();
+        sentinel = new Node(0);
         sentinel.next = sentinel;
         sentinel.prev = sentinel;
     }
@@ -46,13 +46,13 @@ class ListaDuplamenteEncadeada {
 
     public void removerInicio() {
         if (sentinel.next == sentinel) {
-            System.outprintln("Lista vazia, não é possível remover.");
+            System.out.println("Lista vazia, não é possível remover.");
             return;
         }
         Node noParaRemover = sentinel.next;
-        noParaRemover.sentinel.next = noParaRemover.next;
+        sentinel.next = noParaRemover.next;
         noParaRemover.next.prev = sentinel;
         System.out.println("Removido do início: " + noParaRemover.data);
-        noParaRemover = null; // Opcional, para liberar memória
+
     }
 }
