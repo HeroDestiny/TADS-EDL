@@ -1,10 +1,10 @@
-package lista;
+package estruturas.lineares;
 
 class No {
     int data;
     No proximo;
 
-    public No(int data){
+    public No(int data) {
         this.data = data;
         this.proximo = null;
     }
@@ -13,48 +13,48 @@ class No {
 public class ListaLigada {
     No head;
 
-    public void adicionar(int data){
+    public void adicionar(int data) {
         No novoNo = new No(data);
 
-        if (head == null){
+        if (head == null) {
             head = novoNo;
             return;
         }
 
         No atual = head;
-        while (atual.proximo != null){
+        while (atual.proximo != null) {
             atual = atual.proximo;
         }
 
         atual.proximo = novoNo;
     }
 
-    public void imprimirLista(){
+    public void imprimirLista() {
         No atual = head;
 
-        while(atual != null){
-            System.out.println(atual.data + " -> ");
+        while (atual != null) {
+            System.out.print(atual.data + " -> ");
             atual = atual.proximo;
         }
         System.out.println("null");
     }
 
-    public void remover(int data){
-        if (head == null){
+    public void remover(int data) {
+        if (head == null) {
             return;
         }
 
-        if(head.data == data){
+        if (head.data == data) {
             head = head.proximo;
             return;
         }
 
         No atual = head;
-        while(atual.proximo != null && atual.proximo.data != data){
+        while (atual.proximo != null && atual.proximo.data != data) {
             atual = atual.proximo;
         }
 
-        if (atual.proximo != null){
+        if (atual.proximo != null) {
             atual.proximo = atual.proximo.proximo;
         }
     }

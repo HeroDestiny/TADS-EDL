@@ -1,3 +1,5 @@
+package estruturas.nao_lineares;
+
 class Node {
     int data;
     Node left, right;
@@ -8,18 +10,18 @@ class Node {
     }
 }
 
-class BinaryTree {
+public class BinaryTree {
     Node root;
 
-    BinaryTree() {
+    public BinaryTree() {
         root = null;
     }
 
-    void insert(int data) {
+    public void insert(int data) {
         root = insertRec(root, data);
     }
 
-    Node insertRec(Node root, int data) {
+    private Node insertRec(Node root, int data) {
         if (root == null) {
             root = new Node(data);
             return root;
@@ -32,11 +34,11 @@ class BinaryTree {
         return root;
     }
 
-    void inorder() {
+    public void inorder() {
         inorderRec(root);
     }
 
-    void inorderRec(Node root) {
+    private void inorderRec(Node root) {
         if (root != null) {
             inorderRec(root.left);
             System.out.print(root.data + " ");
@@ -44,26 +46,30 @@ class BinaryTree {
         }
     }
 
-    void preorder() {
+    public void preorder() {
         preorderRec(root);
     }
-    void preorderRec(Node root) {
+    
+    private void preorderRec(Node root) {
         if (root != null) {
             System.out.print(root.data + " ");
             preorderRec(root.left);
             preorderRec(root.right);
         }
     }
-    void postorder() {
+    
+    public void postorder() {
         postorderRec(root);
     }
-    void postorderRec(Node root) {
+    
+    private void postorderRec(Node root) {
         if (root != null) {
             postorderRec(root.left);
             postorderRec(root.right);
             System.out.print(root.data + " ");
         }
     }
+    
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();
         tree.insert(9);
@@ -76,14 +82,14 @@ class BinaryTree {
 
         System.out.print("Inorder: ");
         tree.inorder();
-        System.out.println("");
+        System.out.println();
 
-        System.out.print("preorder: ");
+        System.out.print("Preorder: ");
         tree.preorder();
-        System.out.println("");
+        System.out.println();
 
-        System.out.print("postorder: ");
+        System.out.print("Postorder: ");
         tree.postorder();
-        System.out.println("");
+        System.out.println();
     }
 }

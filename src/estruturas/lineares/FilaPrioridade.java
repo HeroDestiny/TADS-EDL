@@ -1,3 +1,5 @@
+package estruturas.lineares;
+
 public class FilaPrioridade {
     private int[] heap;
     private int size;
@@ -50,7 +52,6 @@ public class FilaPrioridade {
         heap[0] = heap[size - 1];
         size--;
         int i = 0;
-
 
         while (true) {
             int menor = i;

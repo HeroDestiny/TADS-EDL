@@ -1,3 +1,5 @@
+package estruturas.lineares;
+
 public class Pilha {
     private int[] elementos;
     private int topo;

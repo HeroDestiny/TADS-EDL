@@ -1,3 +1,5 @@
+package estruturas.lineares;
+
 public class Fila<T> {
     private static class Node<T> {
         private T data;
